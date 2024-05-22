@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Idea Chatbot</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-box"></div>
+        <div id="user-input-container" style="display: none;">
+            <!-- Buttons for selecting domain -->
+            <button onclick="selectDomain('Tech')">Tech</button>
+            <button onclick="selectDomain('Food')">Food</button>
+            <button onclick="selectDomain('Service')">Service</button>
+
+            <!-- Initially hidden buttons for selecting interest -->
+            <div id="interest-buttons" style="display: none;"></div>
+
+            <!-- Rating bar initially hidden -->
+            <div id="rating-bar" style="display: none;">
+                <span>Rating: </span>
+                <input type="range" min="1" max="5" step="1" id="rating-input">
+                <button onclick="handleFeedback(document.getElementById('rating-input').value)">Submit Rating</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
